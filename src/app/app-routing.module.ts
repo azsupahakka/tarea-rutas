@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './cosas/home/home.component';
-import { FloresComponent } from './cosas/flores/flores.component';
 import { PaisesComponent } from './cosas/paises/paises.component';
-import { ComidasComponent } from './cosas/comidas/comidas.component';
+import { EuropeosComponent } from './cosas/paises/europeos/europeos.component';
+import { AmericanosComponent } from './cosas/paises/americanos/americanos.component';
 
 const routes: Routes =  [
   {
@@ -13,16 +13,16 @@ const routes: Routes =  [
     pathMatch: 'full'
   },
   {
-    path: 'flores',
-    component: FloresComponent
-  },
-  {
     path: 'paises',
-    component: PaisesComponent
-  },
-  {
-    path: 'comidas',
-    component: ComidasComponent
+    component: PaisesComponent,
+    children: [
+      {
+        path:'europeos', component: EuropeosComponent
+      },
+      {
+        path:'americanos', component: AmericanosComponent
+      }
+    ]
   },
   {
     path: '**',

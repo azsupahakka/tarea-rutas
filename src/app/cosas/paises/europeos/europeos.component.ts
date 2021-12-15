@@ -6,6 +6,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EuropeosComponent implements OnInit {
 
+  europeos: string[] = [
+    'España',
+    'Italia',
+    'Francia',
+    'Portugal',
+    'Alemania',
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

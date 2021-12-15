@@ -1,7 +1,5 @@
 <ul class="list-group">
-  <li class="list-group-item">España</li>
-  <li class="list-group-item">Italia</li>
-  <li class="list-group-item">Francia</li>
-  <li class="list-group-item">Portugal</li>
-  <li class="list-group-item">Alemania</li>
+  <li *ngFor="let item of europeos; let i = index" class="list-group-item">
+    {{item}}
+  </li>
 </ul>
